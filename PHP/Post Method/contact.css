@@ -1,0 +1,135 @@
+:root{
+    font-size: 62.5%;
+    --basecolor:#0F1E0F;
+    --supportcolor:#AB7843;
+    --support2:#ffffff;
+}
+
+body{
+    font-size: 1.6rem;
+    color: var(--basecolor);
+}
+
+a:hover{
+    color: var(--support2);
+}
+
+button{
+    border:solid 0.2rem var(--supportcolor);
+    padding: 0.5rem 3rem;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+button::after{
+    content: "⟶";
+    color: var(--basecolor);
+    position:relative;
+    left:1rem;
+    transition:all 0.3s ease;
+}
+
+button:hover{
+    color:var(--support2);
+    background-color: var(--supportcolor);
+}
+
+button:hover::after{
+    color:var(--support2);
+    left:2rem;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+form{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding: 4.5rem 5%;/*5% of the remaining space*/
+    width:60rem;
+    height: 60rem;
+    margin: 5rem auto;
+}
+
+form label{
+    display:inline-block;
+    width: 25%;
+}
+
+form input{
+    border: solid 0.2rem var(--supportcolor);
+    background-color: var(--support2);
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    width:70%;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+form textarea{
+    border: solid 0.2rem var(--supportcolor);
+    background-color: var(--support2);
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    width:95%; /*Cz I've used 5% for padding*/
+    height:10rem;
+    white-space: pre-wrap;/* allows wrapping and preserves line breaks when submitting*/
+    word-wrap: break-word;/* breaks long words if needed. If you don't pu this and you write a long word, the horizontal scrollbar will appear which I don't want in this case*/
+    /*In HTML, this is how u'd do it:
+    wrap = "soft" → lines wrap visually, but no line breaks are added when submitted.
+    wrap = "hard" → lines wrap visually, and line breaks are added in the submitted text.
+    I would've wanted the wrap soft but then I wanted to show the css one here.*/
+}
+
+form span{
+    color: red;
+}
+
+form p{
+    font-size: 1.2rem;
+}
+
+form button{
+    margin: 0 auto;
+}
+
+.other-contacts{
+    background-color: var(--supportcolor);
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+    height:25rem;
+    justify-content: center;
+}
+
+.other-contacts .info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-contacts img{
+    width:4rem;
+    height: 4rem;
+}
+
+.other-contacts .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.other-contacts .contacts div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
