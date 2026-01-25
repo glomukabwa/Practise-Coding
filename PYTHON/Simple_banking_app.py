@@ -1,6 +1,7 @@
 def BankingApp():
     currentAmount = 0
-    while True:
+    while True: #This keeps the app running until someone exists. I did this for the withdrawal part after 
+                #depositing cz current amount kept on resetting to zero
         print("What service would you like? Pick an option:")
         print("A.Deposit Money")
         print("B.Withdraw Money")
